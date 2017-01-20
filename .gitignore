@@ -1,0 +1,29 @@
+# bundler configuration
+.bundle
+
+# Exclude composer vendor folder
+htdocs/vendor/
+htdocs/bin/
+
+# Exclude TYPO3 specific path (Created by unit tests)
+htdocs/typo3temp/
+htdocs/uploads/
+
+# Exclude TYPO3
+htdocs/typo3
+htdocs/index.php
+htdocs/typo3_src
+
+htdocs/typo3conf/LocalConfiguration.php
+htdocs/typo3conf/PackageStates.php
+# By default exclude all extensions. Explicit git add for a new extension.
+htdocs/typo3conf/ext/*
+
+# Ignore temporary and cache data
+/temp
+.sass-cache
+.cache*
+*~
+
+# IDE specific
+.idea/

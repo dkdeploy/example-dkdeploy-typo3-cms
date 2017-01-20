@@ -1,0 +1,60 @@
+{
+	"name": "dkd/dkdeploy-typo3",
+	"license": "MIT",
+	"type": "project",
+	"description": "dkdeploy for TYPO3 CMS",
+	"authors": [
+		{
+			"name": "Peter Foerger",
+			"email": "peter.foerger@dkd.de"
+		}
+	],
+	"config": {
+		"vendor-dir": "vendor",
+		"bin-dir": "bin"
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/TYPO3-CMS/introduction.git"
+		},
+		{
+			"type": "composer",
+			"url": "https://composer.typo3.org/"
+		}
+	],
+	"require": {
+		"typo3/cms": "7.6.15",
+		"bk2k/bootstrap-package": "dev-master as 7.0",
+		"typo3/cms-introduction": "dev-master as 2.3.0",
+		"helhum/typo3-console": "4.1.2"
+	},
+	"autoload": {
+		"psr-4": {
+		}
+	},
+	"autoload-dev": {
+	},
+	"require-dev": {
+	},
+	"scripts": {
+		"package-states": [
+			"php bin/typo3cms install:generatepackagestates"
+		],
+		"setup": [
+			"[ ! -f typo3conf/LocalConfiguration.php ] && cp ../config/typo3/LocalConfiguration.php typo3conf/"
+		],
+		"post-autoload-dump": [
+			"@setup",
+			"@package-states"
+		]
+	},
+	"extra": {
+		"helhum/typo3-console": {
+			"install-extension-dummy": false,
+			"active-packages": [
+				"introduction"
+			]
+		}
+	}
+}
