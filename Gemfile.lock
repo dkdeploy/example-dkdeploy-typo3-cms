@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    airbrussh (1.1.2)
+    airbrussh (1.2.0)
       sshkit (>= 1.6.1, != 1.7.0)
     capistrano (3.5.0)
       airbrussh (>= 1.0.0)
@@ -10,7 +10,7 @@ GEM
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
     capistrano-harrow (0.5.3)
-    dkdeploy-core (8.0.0)
+    dkdeploy-core (8.0.1)
       capistrano (~> 3.5.0)
       highline (~> 1.7.1)
       sshkit (= 1.10.0)
@@ -20,12 +20,12 @@ GEM
       dkdeploy-php (~> 7.0)
       phpass-ruby (~> 0.1)
     highline (1.7.8)
-    i18n (0.7.0)
+    i18n (0.8.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (4.0.1)
+    net-ssh (4.1.0)
     phpass-ruby (0.1.2)
-    rake (11.3.0)
+    rake (12.0.0)
     sshkit (1.10.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -37,4 +37,4 @@ DEPENDENCIES
   dkdeploy-typo3-cms (~> 7.0)
 
 BUNDLED WITH
-   1.12.5
+   1.15.0
